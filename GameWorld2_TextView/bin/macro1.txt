@@ -1,0 +1,57 @@
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+
+@ Bob
+Sebastian.TakeOutItem(SodaStorage_WellspringSoda_1)
+Sebastian.Give()
+
+ff 10
+ff 10
+ff 10
+auto_answer on
+Sebastian.Interact(Felix)
+ff 100
+SetHour(17)
+ff 300
+Sebastian.Interact(Gunnar)
+ff 300
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10
+ff 10

@@ -1,0 +1,20 @@
+##some data
+##this is a program
+
+#if( TrunkCount
+# GrowTrunks(100)
+#end
+if(TrunkCount(0) < 1)
+ AddRoot()
+ AddRoot()
+ AddTrunk(0, 1.0)
+ AddLeaf(1, 1.0)
+ AddLeaf(1, 0.8)
+ AddLeaf(1, 0.4)
+end
+
+number waterProd = GetWaterProductionCapacity();
+number need = GetWaterConsumtion();
+if(need > waterProd)
+ GrowRoots(100) #use 100 sugar to grow roots
+end

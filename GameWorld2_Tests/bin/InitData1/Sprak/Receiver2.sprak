@@ -1,0 +1,4 @@
+
+number Foo()
+	return 42
+end

@@ -1,0 +1,4 @@
+﻿
+void ReceiveData(string data)
+	Print("received: " + data)
+end

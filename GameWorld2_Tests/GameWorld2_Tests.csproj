@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42E91EAC-191A-4905-A4A7-F2735ACBDBB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameWorld2_Tests</RootNamespace>
+    <AssemblyName>GameWorld2_Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\GameWorld2\GameWorld2.csproj">
+      <Project>{1E20DFA0-03FF-4F08-9BAF-8B1A8ADDE53C}</Project>
+      <Name>GameWorld2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\GameTypes\GameTypes\GameTypes.csproj">
+      <Project>{EC63C4E3-C5B8-4EB1-90CD-2D2FC17801BD}</Project>
+      <Name>GameTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Grimm\Grimm\Grimm.csproj">
+      <Project>{04E66DF6-70ED-4DC6-8636-9C32C2EE6D96}</Project>
+      <Name>Grimm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Relay\Relay\Relay.csproj">
+      <Project>{9CFC0B9C-EC60-4488-9D4A-79F191AA5AFF}</Project>
+      <Name>Relay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Sprak\ProgrammingLanguageNr1\Sprak.csproj">
+      <Project>{07C3477F-7293-42CC-9B77-C2D66A91A45F}</Project>
+      <Name>Sprak</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\TingTing\TingTing\TingTing.csproj">
+      <Project>{C9BF9326-03A2-482A-B8A2-23FD0C848A2E}</Project>
+      <Name>TingTing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="tests\DoorTests.cs" />
+    <Compile Include="tests\InitialSaveFileCreatorTests.cs" />
+    <Compile Include="tests\InteractionsBetweenTingsTest.cs" />
+    <Compile Include="tests\ProgramTest.cs" />
+    <Compile Include="tests\ProgramRunnerTest.cs" />
+    <Compile Include="tests\SourceCodeDispenserTest.cs" />
+    <Compile Include="tests\TingsWithProgramsInThem.cs" />
+    <Compile Include="tests\CharactersAndDialogue.cs" />
+    <Compile Include="tests\CharactersWalking.cs" />
+    <Compile Include="tests\MimanTingTest.cs" />
+    <Compile Include="tests\WorldTestHelper.cs" />
+    <Compile Include="tests\CarryingStuffAround.cs" />
+    <Compile Include="tests\SeatTests.cs" />
+    <Compile Include="tests\BedTests.cs" />
+    <Compile Include="tests\CharacterKnowledge.cs" />
+    <Compile Include="tests\TimetableTest.cs" />
+    <Compile Include="tests\MemoryTests.cs" />
+    <Compile Include="tests\CreditCardTests.cs" />
+    <Compile Include="tests\TranslatorTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\GameWorld2\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+</Project>

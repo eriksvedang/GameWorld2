@@ -1,0 +1,5 @@
+ClearText()
+var allData = LoadData()
+loop data in allData
+    Print(data)
+end

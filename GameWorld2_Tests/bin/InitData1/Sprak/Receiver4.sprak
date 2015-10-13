@@ -1,0 +1,6 @@
+﻿
+void ReceiveData(number x)
+	Print("received: " + x)
+    var x2 = x + x
+    Print("x + x: " + x2)
+end

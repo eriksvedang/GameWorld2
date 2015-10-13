@@ -1,0 +1,7 @@
+
+number x = Input("Enter number:")
+
+string Foo()
+    return "hej"
+end
+

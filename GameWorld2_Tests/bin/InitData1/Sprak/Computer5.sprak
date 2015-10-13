@@ -1,0 +1,3 @@
+
+var computer6 = Connect("Computer6")
+computer6.Print("hejsan")

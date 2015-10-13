@@ -1,0 +1,11 @@
+﻿
+#if GetPerson() == "Pixie"
+	
+#end
+
+string targetRoom = GetTargetRoom()
+number targetX = GetTargetX()
+number targetY = GetTargetY()
+
+TeleportUser(targetRoom, targetX, targetY)
+

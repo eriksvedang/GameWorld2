@@ -1,0 +1,6 @@
+﻿
+# this program should connect to another Ting (a computer)
+# and call a built in function on it
+
+var id = Connect("Receiver")
+RemoteFunctionCall(id, "Print", ["hej du"])

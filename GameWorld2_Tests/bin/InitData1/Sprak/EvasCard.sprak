@@ -1,0 +1,13 @@
+﻿
+void CheckBalance()
+	var id = Connect("FinanceComputer")
+    Print("id = " + id)
+	var balance = id.GetBalanceForPerson(GetNameOfCardOwner())
+	Print("Balance: " + balance)
+end
+
+void MakeTransaction(number amount)
+    Print("Will make transaction: " + amount)
+    var computer = Connect("FinanceComputer")
+    computer.ChangeBalance(GetNameOfCardOwner(), amount)
+end

@@ -1,0 +1,1 @@
+mono GameWorld2_TextView.exe -autopilot 5000 -macro BeatGame.txt

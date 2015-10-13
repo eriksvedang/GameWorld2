@@ -1,0 +1,4 @@
+Bo "A"
+Bo.PutAwayHandItem()
+WAIT Bo.HasNoHandItem()
+Bo "B"

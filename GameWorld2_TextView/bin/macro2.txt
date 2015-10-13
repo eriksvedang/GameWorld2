@@ -1,0 +1,12 @@
+auto_answer OFF
+! START CanStartSellingSoda
+! Sebastian.Interact(TouristOfficeGal)
+! Sebastian.SetKnowledge(PetraIsPixiesFriend)
+ff 200
+ff 200
+ff 200
+ff 200
+ff 200
+ff 200
+ff 200
+ff 200

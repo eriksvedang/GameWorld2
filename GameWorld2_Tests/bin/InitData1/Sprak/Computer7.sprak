@@ -1,0 +1,3 @@
+
+var computer8 = Connect("Computer8")
+computer8.Blaha()

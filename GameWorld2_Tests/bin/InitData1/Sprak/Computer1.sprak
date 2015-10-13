@@ -1,0 +1,6 @@
+﻿
+var id = Connect("Computer2")
+
+var answer = RemoteFunctionCall(id, "Foo", [])
+
+Print(answer)

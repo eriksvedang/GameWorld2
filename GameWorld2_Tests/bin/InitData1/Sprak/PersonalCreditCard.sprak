@@ -1,0 +1,12 @@
+
+void CheckBalance()
+	var id = Connect("FinanceComputer")
+	var balance = RemoteFunctionCall(id, "GetBalance", [])
+	Print("Balance: " + balance)
+end
+
+void MakeTransaction(number amount)
+	var id = Connect("FinanceComputer")
+	var response = RemoteFunctionCall(id, "Transact", [amount])
+	Print(response)
+end

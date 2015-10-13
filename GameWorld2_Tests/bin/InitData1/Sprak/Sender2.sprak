@@ -1,0 +1,5 @@
+
+var receiver = Connect("Receiver")
+
+var a = RemoteFunctionCall(receiver, "Foo", [])
+Print("got back: " + a)

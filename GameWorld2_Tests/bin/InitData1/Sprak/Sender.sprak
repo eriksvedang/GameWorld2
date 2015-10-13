@@ -1,0 +1,8 @@
+﻿
+Print("bleh")
+
+var receiver = Connect("Receiver")
+
+#receiver.ReceiveData("hej")
+
+RemoteFunctionCall(receiver, "ReceiveData", ["hej"])

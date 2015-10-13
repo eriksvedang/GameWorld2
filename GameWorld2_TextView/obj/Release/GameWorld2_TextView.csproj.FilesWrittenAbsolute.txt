@@ -1,0 +1,12 @@
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/GameWorld2_TextView.exe
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/obj/Release/GameWorld2_TextView.exe
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Newtonsoft.Json.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/GameWorld2.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Grimm.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/GameTypes.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Relay.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Relay.dll.mdb
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/ProgrammingLanguageNr1.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/TingTing.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Pathfinding.dll
+/Users/erik/Projects/ElseHeartbreak/assembla/GameWorld2/GameWorld2_TextView/bin/Release/Pathfinding.dll.mdb

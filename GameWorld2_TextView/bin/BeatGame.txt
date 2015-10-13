@@ -1,0 +1,56 @@
+auto_answer on #StartLogging(Sebastian)
+
+@ TouristOfficeGal
+-> idle
+@ Babcia
+-> idle
+
+@ Hotel_Corridor_Door1
+-> idle
+@ Babcia
+-> idle
+
+Sebastian.TakeOutItem(SebastianCreditCard)
+-> idle
+Sebastian.Give()
+
+i
+ASSERT Sebastian.HasHandItemWithName(KeyRoom1)
+Sebastian.Interact(Hotel_Corridor_Door1) # walk up to the door
+ff 200
+Sebastian.TakeOutItem(KeyRoom1)
+ff 10
+Sebastian.InteractUsingHandItem(Hotel_Corridor_Door1) # unlock
+ff 10
+Sebastian.Interact(Hotel_Corridor_Door1) # walk through door
+ff 50
+i
+ASSERT Sebastian.IsInRoom(Hotel_Bathroom)
+Sebastian.Interact(Babcia)
+ff 200
+Sebastian.Interact(Hotel_Room1_Bed)
+ff 1000 # 8h = 120 * 8 sekunder
+i
+ASSERT Sebastian.IsInRoom(Hotel_Room1)
+
+# "First day"
+Sebastian.Walk(Hotel_Lobby_Point)
+ff 60
+Sebastian.Walk(Cafe_Room1_Point)
+ff 240
+Sebastian.Walk(HarborWest_Point)
+ff 400
+Sebastian.Walk(WellspringRepresentant)
+ff 60
+
+Sebastian.Interact(TouristOfficeGal)
+ff 120
+Sebastian.Interact(Bob)
+ff 120
+Sebastian.Interact(Babcia)
+ff 120
+Sebastian.Interact(Hotel_Room1_Bed)
+ff 500
+
+Log("Reached the end of beat script!")
+stop

@@ -1,0 +1,29 @@
+
+number ReadHumidity()
+    number humidity = 100
+    Print("Reading requested, humidity is " + humidity)
+    return humidity
+end
+
+var mode = Input("Set weather (1 - 4): ")
+
+if mode == 1
+    Print("Sunny")
+    SetRain(0)
+end
+
+if mode == 2
+    Print("Drizzle")
+    SetRain(25)
+end
+
+if mode == 3
+    Print("Rain")
+    SetRain(100)
+end
+
+if mode == 4
+    Print("Storm!")
+    SetRain(200)
+end
+

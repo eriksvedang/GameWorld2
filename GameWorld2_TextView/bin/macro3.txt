@@ -1,0 +1,22 @@
+! Sebastian.Pos(FelixApartment_Point1)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick
+! Sebastian.Walk(Hotel_Exterior_Point)
+tick

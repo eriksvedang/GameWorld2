@@ -1,0 +1,8 @@
+﻿
+string Foo()
+    return "hej"
+end
+
+loop
+    Print("LOOP!")
+end

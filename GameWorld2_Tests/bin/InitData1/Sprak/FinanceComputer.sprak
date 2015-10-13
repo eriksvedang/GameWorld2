@@ -1,0 +1,33 @@
+﻿
+LookUpPeople() # Main entry point
+
+void LookUpPeople()
+    loop
+        Print("")
+        Print("Enter name of person")
+        var name = Input("")
+        var balance = LoadMemory(name)
+        Print("Balance: " + balance)
+    end
+end
+
+void ChangeBalance(string person, number amount)
+    var msg = "Changing balance for " + person + " by amount " + amount
+    Print(msg)
+    var oldBalance = 0
+    if HasMemory(person)
+        oldBalance = LoadMemory(person)
+    end
+    Print("Old balance: " + oldBalance)
+    var newBalance = oldBalance + amount
+    SaveMemory(person, newBalance)
+    Print("Changed balance for " + person + " from " + oldBalance + " to " + newBalance)
+end
+
+number GetBalanceForPerson(string name)
+    var msg = "Checking balance for person " + name
+    Print(msg)
+    var balance = LoadMemory(name)
+    Print("Returning balance: " + balance)
+    return balance
+end

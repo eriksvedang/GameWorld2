@@ -1,0 +1,4 @@
+﻿
+var receiver = Connect("Receiver")
+
+RemoteFunctionCall(receiver, "ReceiveData", ["5"]) # sending 5 as a string is incorrect but should work since the receiver could convert the type

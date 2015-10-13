@@ -1,0 +1,6 @@
+﻿
+var computer4 = Connect("Computer4")
+
+#RemoteFunctionCall(computer4, "Foo", ["hej"])
+
+computer4.Foo("hej")

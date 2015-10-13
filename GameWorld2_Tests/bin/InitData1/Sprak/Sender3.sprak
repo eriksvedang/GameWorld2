@@ -1,0 +1,4 @@
+﻿
+var receiver = Connect("Receiver")
+
+RemoteFunctionCall(receiver, "ReceiveData", ["svejs"]) # the ReceiveData function is not returning anything

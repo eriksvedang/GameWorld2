@@ -1,0 +1,4 @@
+﻿
+void Print2(string text)
+	Print(text)
+end

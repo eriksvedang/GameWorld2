@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E20DFA0-03FF-4F08-9BAF-8B1A8ADDE53C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameWorld2</RootNamespace>
+    <AssemblyName>GameWorld2</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="sh copydlls.sh" workingdir="${TargetDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="sh copydlls.sh" workingdir="${TargetDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\World.cs" />
+    <Compile Include="src\InitialSaveFileCreator.cs" />
+    <Compile Include="src\MimanTing.cs" />
+    <Compile Include="src\Tings\Character.cs" />
+    <Compile Include="src\Tings\Drink.cs" />
+    <Compile Include="src\Tings\Key.cs" />
+    <Compile Include="src\Tings\Door.cs" />
+    <Compile Include="src\Tings\Bed.cs" />
+    <Compile Include="src\Tings\Floppy.cs" />
+    <Compile Include="src\Tings\MysticalCube.cs" />
+    <Compile Include="src\Tings\Seat.cs" />
+    <Compile Include="src\Programs\Program.cs" />
+    <Compile Include="src\Programs\ProgramRunner.cs" />
+    <Compile Include="src\Programs\SourceCodeDispenser.cs" />
+    <Compile Include="src\Programs\SourceCode.cs" />
+    <Compile Include="src\MimanTingRunner.cs" />
+    <Compile Include="src\MimanGrimmApiDefinitions.cs" />
+    <Compile Include="src\WorldSettings.cs" />
+    <Compile Include="src\Tings\Point.cs" />
+    <Compile Include="src\Tings\Lamp.cs" />
+    <Compile Include="src\Tings\Teleporter.cs" />
+    <Compile Include="src\Tings\Extractor.cs" />
+    <Compile Include="src\Tings\Radio.cs" />
+    <Compile Include="src\Tings\MusicBox.cs" />
+    <Compile Include="src\Tings\FuseBox.cs" />
+    <Compile Include="src\Tings\Theremin.cs" />
+    <Compile Include="src\Tings\TrashCan.cs" />
+    <Compile Include="src\Tings\Portal.cs" />
+    <Compile Include="src\Tings\Drug.cs" />
+    <Compile Include="src\Timetables\Timetable.cs" />
+    <Compile Include="src\Timetables\TimetableRunner.cs" />
+    <Compile Include="src\Timetables\TimetableBehaviours.cs" />
+    <Compile Include="src\Timetables\TimetableSpan.cs" />
+    <Compile Include="src\FileHelper.cs" />
+    <Compile Include="src\Tings\Computer.cs" />
+    <Compile Include="src\Tings\Hackdev.cs" />
+    <Compile Include="src\UnreachablePathCacheItem.cs" />
+    <Compile Include="src\Tings\FlowerPot.cs" />
+    <Compile Include="src\Tings\Memory.cs" />
+    <Compile Include="src\Tings\CreditCard.cs" />
+    <Compile Include="src\Tings\Pawn.cs" />
+    <Compile Include="src\Tings\Button.cs" />
+    <Compile Include="src\Tings\SharedAPIs.cs" />
+    <Compile Include="src\Tings\Taser.cs" />
+    <Compile Include="src\Tings\Machine.cs" />
+    <Compile Include="src\Tings\Goods.cs" />
+    <Compile Include="src\Tings\Robot.cs" />
+    <Compile Include="src\PathFinder\MimanPathfinder.cs" />
+    <Compile Include="src\PathFinder\MimanPath.cs" />
+    <Compile Include="src\PathFinder\IExit.cs" />
+    <Compile Include="src\SmartWalkBehaviour.cs" />
+    <Compile Include="src\Tings\Tv.cs" />
+    <Compile Include="src\Tings\Sink.cs" />
+    <Compile Include="src\Tings\Bathtub.cs" />
+    <Compile Include="src\Tings\Fountain.cs" />
+    <Compile Include="src\Tings\Locker.cs" />
+    <Compile Include="src\Tings\Jewellery.cs" />
+    <Compile Include="src\Tings\Stove.cs" />
+    <Compile Include="src\Tings\FryingPan.cs" />
+    <Compile Include="src\Tings\Screwdriver.cs" />
+    <Compile Include="src\Tings\Battery.cs" />
+    <Compile Include="src\Tings\Tram.cs" />
+    <Compile Include="src\Tings\Boat.cs" />
+    <Compile Include="src\Tings\Vehicle.cs" />
+    <Compile Include="src\Tings\NavNode.cs" />
+    <Compile Include="src\Tings\SendPipe.cs" />
+    <Compile Include="src\Tings\Fence.cs" />
+    <Compile Include="src\Tings\Snus.cs" />
+    <Compile Include="src\Tings\Cigarette.cs" />
+    <Compile Include="src\Tings\Suitcase.cs" />
+    <Compile Include="src\Tings\Telephone.cs" />
+    <Compile Include="src\Tings\Map.cs" />
+    <Compile Include="src\Tings\VendingMachine.cs" />
+    <Compile Include="src\Translator\Translator.cs" />
+    <Compile Include="src\PathFinder\MimanPathfinder2.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>sh copydlls.sh</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\Timetables\" />
+    <Folder Include="src\PathFinder\" />
+    <Folder Include="src\Translator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\github\GameTypes\GameTypes\GameTypes.csproj">
+      <Project>{EC63C4E3-C5B8-4EB1-90CD-2D2FC17801BD}</Project>
+      <Name>GameTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Grimm\Grimm\Grimm.csproj">
+      <Project>{04E66DF6-70ED-4DC6-8636-9C32C2EE6D96}</Project>
+      <Name>Grimm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Relay\Relay\Relay.csproj">
+      <Project>{9CFC0B9C-EC60-4488-9D4A-79F191AA5AFF}</Project>
+      <Name>Relay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\Sprak\ProgrammingLanguageNr1\Sprak.csproj">
+      <Project>{07C3477F-7293-42CC-9B77-C2D66A91A45F}</Project>
+      <Name>Sprak</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\github\TingTing\TingTing\TingTing.csproj">
+      <Project>{C9BF9326-03A2-482A-B8A2-23FD0C848A2E}</Project>
+      <Name>TingTing</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
