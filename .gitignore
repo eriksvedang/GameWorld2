@@ -14,3 +14,7 @@ Grimm.dll
 ProgrammingLanguageNr1.dll
 
 
+
+*.exe
+
+*.xml
