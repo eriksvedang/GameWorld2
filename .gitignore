@@ -3,6 +3,7 @@
 *.mdb
 *.mlpd
 *.dll.mdb
+*.exe
 
 GameWorld2.dll
 GameWorld2_Tests.dll
