@@ -97,8 +97,9 @@ namespace GameWorld2_Tests
 			Assert.AreEqual(new Dictionary<RoomGroup,Ting>() 
 				{
 				{new RoomGroup(eden, 0), middleRoomDoor1}, 
-				{new RoomGroup(dist, 0), middleRoomDoor2}, 
-				{new RoomGroup(wrong, 0), middleRoomDoor3}
+					{new RoomGroup(wrong, 0), middleRoomDoor3}, // ORDERED?! wtf
+					{new RoomGroup(dist, 0), middleRoomDoor2}, 
+				
 				}, 
 				network.linkedRoomGroups[new RoomGroup(mid, 0)]);
 			Assert.AreEqual(new Dictionary<RoomGroup,Ting>() {{new RoomGroup(mid, 0), wrongRoomDoor}}, network.linkedRoomGroups[new RoomGroup(wrong, 0)]);
