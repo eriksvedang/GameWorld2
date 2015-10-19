@@ -20,3 +20,7 @@ ProgrammingLanguageNr1.dll
 *.xml
 
 *.userprefs
+
+*FilesWrittenAbsolute.txt
+
+GameWorld2_TextView/obj/Debug/GameWorld2_TextView.csproj.FilesWrittenAbsolute.txt
