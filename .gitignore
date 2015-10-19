@@ -3,6 +3,9 @@
 *.mdb
 *.mlpd
 *.dll.mdb
+*.exe
+*.xml
+*.userprefs
 
 GameWorld2.dll
 GameWorld2_Tests.dll
@@ -13,14 +16,5 @@ GameTypes.dll
 Grimm.dll
 ProgrammingLanguageNr1.dll
 
-
-
-*.exe
-
-*.xml
-
-*.userprefs
-
 *FilesWrittenAbsolute.txt
 
-GameWorld2_TextView/obj/Debug/GameWorld2_TextView.csproj.FilesWrittenAbsolute.txt
