@@ -1673,7 +1673,7 @@ namespace GameWorld2
 			}
 		}
 
-		[SprakAPI("Connect to an external memory unit", "key")]
+		[SprakAPI("Connect to an external memory unit (HD)", "key")]
 		public object SetMemoryUnit (object[] args)
 		{
 			string memoryUnitName = ReturnValueConversions.SafeUnwrap<string>(args, 0);

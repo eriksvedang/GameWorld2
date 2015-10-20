@@ -165,7 +165,13 @@ namespace GameWorld2
 		
 		public override string tooltipName {
 			get {
-				return "person";
+				Character avatar = _tingRunner.GetTingUnsafe(_worldSettings.avatarName) as Character;
+				if(avatar != null && avatar.HasKnowledge(name)) {
+					return name;
+				}
+				else {
+					return "person";
+				}
 			}
 		}
 		

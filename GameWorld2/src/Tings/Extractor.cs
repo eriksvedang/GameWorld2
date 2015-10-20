@@ -43,14 +43,13 @@ namespace GameWorld2
 		[SprakAPI("Get the user defined label of the attached thing")]
 		public string API_GetLabel()
 		{
-			API_Sleep (Randomizer.GetValue(1.0f, 3.0f));
+			API_Sleep (Randomizer.GetValue(1.0f, 2.0f));
 			return _target.userDefinedLabel;
 		}
 
 		[SprakAPI("Set the user defined label of the attached thing")]
 		public string API_SetLabel()
 		{
-			API_Sleep (Randomizer.GetValue(1.0f, 3.0f));
 			return _target.userDefinedLabel;
 		}
 
@@ -100,13 +99,13 @@ namespace GameWorld2
 			Say (text, "");
 		}
 
-		public Action<String> copyToClipboard;
+		//public Action<String> copyToClipboard;
 
 		[SprakAPI("Copy a piece of text to the clipboard", "text")]
 		public void API_CopyToClipboard(string text)
 		{
-			if(copyToClipboard != null) {
-				copyToClipboard(text);
+			if(_worldSettings.onCopyToClipboard != null) {
+				_worldSettings.onCopyToClipboard(text);
 			}
 			else {
 				D.Log("copyToClipboard is null");

@@ -17,6 +17,9 @@ namespace GameWorld2
 
 		public delegate void OnCameraTarget (string pLookFromHere, string pTargetName);
 		public OnCameraTarget onCameraTarget;
+
+		public delegate void CopyToClipboard (string text);
+		public CopyToClipboard onCopyToClipboard;
 		
 		public void Notify(string pName, string pMessage) {
 			if(onNotification != null && !muteNotifications) {
