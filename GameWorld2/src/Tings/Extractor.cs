@@ -40,6 +40,20 @@ namespace GameWorld2
 			return _target.name;
 		}
 
+		[SprakAPI("Get the user defined label of the attached thing")]
+		public string API_GetLabel()
+		{
+			API_Sleep (Randomizer.GetValue(1.0f, 3.0f));
+			return _target.userDefinedLabel;
+		}
+
+		[SprakAPI("Set the user defined label of the attached thing")]
+		public string API_SetLabel()
+		{
+			API_Sleep (Randomizer.GetValue(1.0f, 3.0f));
+			return _target.userDefinedLabel;
+		}
+
 		[SprakAPI("Sleepiness of attached character")]
 		public float API_GetSleepiness()
 		{

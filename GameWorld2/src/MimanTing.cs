@@ -44,6 +44,7 @@ namespace GameWorld2
 		ValueEntry<bool> CELL_audioLoop;
 		
 		ValueEntry<float> CELL_messageTimer;
+		ValueEntry<string> CELL_userDefinedLabel;
 		
 		public delegate void OnPlaySound(string pKey);
 		public OnPlaySound onPlaySound;
@@ -63,6 +64,8 @@ namespace GameWorld2
 			CELL_audioLoop = EnsureCell("audioLoop", false);
 			
 			CELL_messageTimer = EnsureCell("messageTimer", 0f);
+
+			CELL_userDefinedLabel = EnsureCell("userDefinedLabel", "");
 		}
 
 		internal void SetMimanRunners(ProgramRunner pProgramRunner, SourceCodeDispenser pSourceCodeDispenser, DialogueRunner pDialogueRunner, WorldSettings pWorldSettings) 
@@ -491,6 +494,16 @@ namespace GameWorld2
 			}
 			set {
 				CELL_messageTimer.data = value;
+			}
+		}
+
+		public string userDefinedLabel
+		{
+			get {
+				return CELL_userDefinedLabel.data;
+			}
+			set {
+				CELL_userDefinedLabel.data = value;
 			}
 		}
 

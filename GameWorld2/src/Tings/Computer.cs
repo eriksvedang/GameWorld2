@@ -438,6 +438,12 @@ namespace GameWorld2
 			return screenHeight;
 		}
 
+//		[SprakAPI("Does the computer have a monitor?")]
+//		public float API_HasMonitor()
+//		{
+//			return ;
+//		}
+
 //		[SprakAPI("Get the current time as a string")]
 //		public string API_ClockTime()
 //		{

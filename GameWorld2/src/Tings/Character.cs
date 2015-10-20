@@ -1174,7 +1174,8 @@ namespace GameWorld2
 
 			var dropTarget = new WorldCoordinate (room.name, localPoint + IntPoint.DirectionToIntPoint (direction) * 2);
 			var tileDropTarget = room.GetTile(dropTarget.localPosition);
-			if(tileDropTarget == null || tileDropTarget.HasOccupants()) {
+
+			if(tileDropTarget == null || (isAvatar && tileDropTarget.HasOccupants())) {
 				_worldSettings.Notify (name, "Can't put " + handItem.name + " there");
 				return;
 			}
