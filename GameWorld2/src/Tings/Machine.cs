@@ -170,8 +170,9 @@ namespace GameWorld2
 		}
 		
 		char Improve(char c) {
-			if(c == 'a') return 'a';
-			return (char)(c - 1);
+			char better = (char)(c - Randomizer.GetIntValue(1, 6));
+			if((int)better <= (int)'a') return 'a';
+			return better;
 		}
 
 		void RunBlock ()
@@ -205,12 +206,15 @@ namespace GameWorld2
 
 			definitelyGoods.minerals[(int)pos] = improvedChar;
 			
-			if(Randomizer.OneIn(10)) {
-				definitelyGoods.minerals[Randomizer.GetIntValue(0, definitelyGoods.minerals.Length)] = 'z';
+			if(Randomizer.OneIn(7)) {
+				definitelyGoods.minerals[(int)pos] = Randomizer.RandNth(badChars);
+				//Randomizer.GetIntValue(0, definitelyGoods.minerals.Length)
 			}
 
 			masterProgram.sleepTimer = 2.0f;
 		}
+
+		static char[] badChars = new char[] {'u', 'v', 'w', 'x','y','z'};
 
 		[SprakAPI("Get an overview of the minerals inside the goods")]
 		public string API_Analyze()

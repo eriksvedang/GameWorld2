@@ -97,13 +97,36 @@ namespace GameWorld2
 		
 		// How pure is the mineral content? From 0 to 1
 		public float GetPureness() {
-			int nrOfA = 0;
+			float total = 0f;
 			foreach (var c in minerals) {
+				//int ci = ((int)c) - ((int)'a');
+				//total += 1.0f - ((float)(ci) / 26.0f);
 				if(c == 'a') {
-					nrOfA++;
+					total += 1.0f;
+				}
+				else if(c == 'b') {
+					total += 0.75f;
+				}
+				else if(c == 'c') {
+					total += 0.5f;
+				}
+				else if(c == 'd') {
+					total += 0.4f;
+				}
+				else if(c == 'e') {
+					total += 0.3f;
+				}
+				else if(c == 'f') {
+					total += 0.2f;
+				}
+				else if(c == 'g') {
+					total += 0.1f;
+				}
+				else {
+					// not pure
 				}
 			}
-			return (float)nrOfA / minerals.Length;
+			return total / minerals.Length;
 		}
 
 		public override Program masterProgram {
