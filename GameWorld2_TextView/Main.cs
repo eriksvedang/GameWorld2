@@ -186,10 +186,10 @@ namespace GameWorld2_TextView
 			InitialSaveFileCreator saveCreator = new InitialSaveFileCreator ();
 
 			if(saveFileName != "") {
-				//IEnumerable<float> loader = saveCreator.LoadFromFile("../../../../MimanUnity2/Saves/Quicksave.json");
+				//IEnumerable<float> loader = saveCreator.LoadFromFile("../../../../../assembla/MimanUnity2/Saves/Quicksave.json");
 				loader = saveCreator.LoadFromFile(saveFileName);
 			} else {
-				loader = saveCreator.LoadRelayFromDirectory ("../../../../MimanUnity2/InitData/");
+				loader = saveCreator.LoadRelayFromDirectory ("../../../../../assembla/MimanUnity2/InitData/");
 			}
 
 			// Load files
@@ -264,7 +264,7 @@ namespace GameWorld2_TextView
 
 		static void LoadTranslationFiles ()
 		{
-			_world.translator.LoadTranslationFiles ("../../../../MimanUnity2/InitData/Translations");
+			_world.translator.LoadTranslationFiles ("../../../../../assembla/MimanUnity2/InitData/Translations");
 		}
 
 		static void PrintBranchingNode()
