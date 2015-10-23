@@ -1673,10 +1673,15 @@ namespace GameWorld2
 			}
 		}
 
-		[SprakAPI("Connect to an external memory unit (HD)", "key")]
-		public object SetMemoryUnit (object[] args)
+		[SprakAPI("Connect to an external hard drive", "name")]
+		public void API_HD (string memoryUnitName)
 		{
-			string memoryUnitName = ReturnValueConversions.SafeUnwrap<string>(args, 0);
+			if(memoryUnitName == "") {
+				_computer.memory = null;
+				_computer.API_Print("Disconnected from external memory unit");
+				return;
+			}
+
 			Memory memoryUnit = _tingRunner.GetTingUnsafe(memoryUnitName) as Memory;
 
 			if(memoryUnit != null) {
@@ -1686,8 +1691,6 @@ namespace GameWorld2
 			else {
 				throw new Error ("Can't connect to external memory unit '" + memoryUnitName + "'");
 			}
-
-			return VoidType.voidType;
 		}
 
 		[SprakAPI("Get the keys of all entries in the memory unit")]
