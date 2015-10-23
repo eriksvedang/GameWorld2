@@ -37,6 +37,14 @@ namespace GameWorld2
 		public string API_GetName()
 		{
 			API_Sleep (Randomizer.GetValue(1.0f, 3.0f));
+
+			if(_target is Character) {
+				Character avatar = _tingRunner.GetTingUnsafe(_worldSettings.avatarName) as Character;
+				if(avatar != null) {
+					avatar.SetKnowledge(_target.name);
+				}
+			}
+			
 			return _target.name;
 		}
 
@@ -48,9 +56,10 @@ namespace GameWorld2
 		}
 
 		[SprakAPI("Set the user defined label of the attached thing")]
-		public string API_SetLabel()
+		public void API_SetLabel(string label)
 		{
-			return _target.userDefinedLabel;
+			API_Sleep (Randomizer.GetValue(1.0f, 2.0f));
+			_target.userDefinedLabel = label;
 		}
 
 		[SprakAPI("Sleepiness of attached character")]
