@@ -260,6 +260,22 @@ namespace GameWorld2
 #if LOG
 						s_logger.Log(_character.name + " will try to go through the IExit by interacting with it");
 #endif
+
+						var door = nextTing as Door;
+
+						if(_character.hasHackdev && _character.timetableName != "" && door != null) {
+							string originalSourceCode = door.sourceCodeDispenser.GetSourceCode(door.masterProgram.sourceCodeName).content;
+
+							if(door.masterProgram.sourceCodeContent != originalSourceCode) {
+								D.Log("Code for the door " + door.name + " that " + _character + " is using has been hacked, she/he will try to fix.");
+								door.masterProgram.sourceCodeContent = originalSourceCode;
+								_character.handItem = _character.hackdev;
+								_character.Hack(door);
+								_character.timetableTimer = 15f;
+								return;
+							}
+						}
+
 						_character.InteractWith(nextTing);
 					}					
 				}

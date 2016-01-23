@@ -1495,6 +1495,13 @@ namespace GameWorld2
 					pCharacter.WalkToTingAndInteract(_ting);
 				}
 			}
+			else if(!atGoal) {
+				#if LOG
+				pCharacter.logger.Log("Will set action to '', atGoal " + atGoal + " goalIsSet: " + goalIsCorrectlySet);
+				#endif
+				D.Log(pCharacter + " will do new thing: StopAction() in Behaviour_Interact");
+				pCharacter.StopAction();
+			}
 			else {
 				#if LOG
 				pCharacter.logger.Log("Nothing to do, atGoal " + atGoal + " goalIsSet: " + goalIsCorrectlySet);

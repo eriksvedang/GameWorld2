@@ -2063,6 +2063,25 @@ namespace GameWorld2
 			}
 			return roomNames.ToArray();
 		}
+
+		[SprakAPI("Get the type of a thing")]
+		public string API_GetTypeOfThing (string name)
+		{
+			var ting = _tingRunner.GetTingUnsafe (name);
+
+			if(ting == null) {
+				_computer.Say("No such thing", "");
+				return "";
+			}
+			
+			string type = ting.GetType().Name.ToLower();
+			
+			if (type == "hackdev") {
+				type = "modifier";
+			}
+			
+			return type;
+		}
 	}
 
 	public class TrapAPI

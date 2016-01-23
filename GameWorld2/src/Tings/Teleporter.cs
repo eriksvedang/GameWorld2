@@ -52,7 +52,7 @@ namespace GameWorld2
 		[SprakAPI("Teleport to another position in the same room. Returns an error message as a string.", "x", "y")]
 		public string API_Teleport(float x, float y)
 		{
-			if(_user != null) {
+			if(IsAllowedToTeleport(_user as Character)) {
 				WorldCoordinate coord = new WorldCoordinate(_user.room.name, (int)x, (int)y);
 				PointTileNode tile = _user.room.GetTile(coord.localPosition);
 				if(tile != null) {
@@ -64,7 +64,8 @@ namespace GameWorld2
 				}
 			}
 			else {
-				throw new Exception("User is null");
+				D.Log("Not allowed to teleport");
+				return "Not allowed";
 			}
 		}
 
@@ -75,7 +76,7 @@ namespace GameWorld2
 				return "Can't teleport there";
 			}
 
-			if(_user != null) {
+			if(IsAllowedToTeleport(_user as Character)) {
 				if(_roomRunner.HasRoom(room)) {
 					WorldCoordinate coord = new WorldCoordinate(room, (int)x, (int)y);
 					_user.position = coord;
@@ -86,8 +87,13 @@ namespace GameWorld2
 				}
 			}
 			else {
-				throw new Error("User is null");
+				D.Log("Not allowed to set world position");
+				return "Not allowed";
 			}
+		}
+
+		bool IsAllowedToTeleport(Character pUser) {
+			return pUser != null && !pUser.talking && pUser.conversationTarget == null;
 		}
 
 		public void PushButton(Ting pUser)

@@ -179,7 +179,35 @@ namespace GameWorld2
 			}
 
 			int count = Behaviour_Sell.CountNrOfTingsWithPrefab(_tingRunner, prefabName);
-			var newDrink = _tingRunner.CreateTingAfterUpdate<Drink>(prefabName + "_Drink_dispensed_" + count, position, GameTypes.Direction.DOWN, prefabName);
+
+			string safeName = prefabName + "_Drink_dispensed_" + count;
+			var newItem = _tingRunner.GetTingUnsafe(safeName);
+
+			if(newItem != null) {
+				if(newItem.room.name == "Sebastian_inventory" || newItem.isBeingHeld) {
+					D.Log("VENDING MACHINE: There's already a " + safeName + " but a character is holding it (or avatar has it)");
+					for(int i = 0; i < 9999; i++) {
+						string newName = safeName + "_safe_" + i;
+						var item = _tingRunner.GetTingUnsafe(newName) as MimanTing;
+						if(item == null) {
+							// free name!
+							safeName = newName;
+							break;
+						}
+					}
+				}
+				else {
+					D.Log("VENDING MACHINE: There's already a " + safeName + ", will use that one instead!");
+					var foundDrink = newItem as Drink;
+					foundDrink.position = position;
+					foundDrink.masterProgramName = programName;
+					foundDrink.liquidType = liquidType;
+					foundDrink.amount = liquidAmount;
+					return;
+				}
+			}
+
+			var newDrink = _tingRunner.CreateTingAfterUpdate<Drink>(safeName, position, GameTypes.Direction.DOWN, prefabName);
 			newDrink.masterProgramName = programName;
 			newDrink.liquidType = liquidType;
 			newDrink.amount = liquidAmount;

@@ -88,7 +88,7 @@ namespace GameWorld2
 				_sprakRunner.returnFromExternalFunctionCall = false;
 			}
 		}
-		
+
 		public void ClearErrors()
 		{
 			if (_sprakRunner != null) {

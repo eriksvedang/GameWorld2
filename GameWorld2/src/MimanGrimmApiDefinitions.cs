@@ -33,6 +33,8 @@ namespace GameWorld2
 		{
 			_world.dialogueRunner.AddFunction("Hint", Hint);
 			_world.dialogueRunner.AddFunction("Story", Story);
+			_world.dialogueRunner.AddFunction("GetActiveNodes", GetActiveNodes);
+			_world.dialogueRunner.AddFunction("SetFocus", SetFocus);
 			_world.dialogueRunner.AddFunction("WP", WP);
 			_world.dialogueRunner.AddFunction("Log", Log);
 			_world.dialogueRunner.AddFunction("Path", Path);
@@ -748,6 +750,25 @@ namespace GameWorld2
 
 			_world.dialogueRunner.StartAllConversationsContaining (partialName);
 			_world.settings.LogStoryEvent("Story(" + partialName + ")");
+		}
+
+		private void GetActiveNodes(string[] args)
+		{
+			string diaName = args[0];
+			
+			var activeNodes = _world.dialogueRunner.GetActiveNodes(diaName);
+
+			D.Log("Active nodes: ");
+			foreach (var node in activeNodes) {
+				D.Log(node.ToString());
+			}
+			D.Log("---");
+		}
+
+		private void SetFocus(string[] args)
+		{
+			string diaName = args[0];
+			_world.dialogueRunner.FocusConversation(diaName);
 		}
 
 		// Log(string s)

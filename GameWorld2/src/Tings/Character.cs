@@ -1770,7 +1770,7 @@ namespace GameWorld2
 				if(conversationTarget == null && !neverGetsTired && !talking && !laying && !sitting) {
 
 					sleepiness += _worldSettings.gameTimeSpeed * dt * 0.0015f;
-					if (sleepiness > 99.0f && IsIdle ()) {
+					if (sleepiness > 99.0f && IsIdle () && !talking) {
 						if (sitting) {
 							#if LOG
 							logger.Log (name + " falling asleep in a seat from exhaustion");
